@@ -11,6 +11,6 @@ class DonDatHang
     public $hTThanhToan;
     public $xuLy;
     public $ghiChu;
-    public $maKH;
+    public $maKH
 
 }

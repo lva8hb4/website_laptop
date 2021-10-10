@@ -6,6 +6,6 @@ class Data_Provider
         $conn = new mysqli("localhost","root","","website_laptop") or die
         (mysqli_error());
         $conn->set_charset("utf8");
-        return $conn;
+        return $conn
     }
 }
