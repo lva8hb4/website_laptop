@@ -36,7 +36,7 @@
                 <li class="divider"></li>
                 <li><a href="DangNhap.php" class="nav3">Đăng nhập</a></li>
                 <li class="divider"></li>
-                <li><a href="SuaKhachHang.php?maKH=<?php echo $_SESSION['maKH'] ?>"> <p align="right">Xin chào <?php echo $_SESSION['hoTen'] ?> <img src="../assets/images/avatars/<?php echo $_SESSION['anh'] ?>" alt=""/></p></a>
+                <li><a href="SuaKhachHang.php?maKH=<?php if(isset($_SESSION['maKH'])){ echo $_SESSION['maKH'] ?>"> <p align="right">Xin chào <?php echo $_SESSION['hoTen'] ?> <img src="../assets/images/avatars/<?php echo $_SESSION['anh']; } ?>" alt=""/></p></a>
                     <a href="DangNhap.php" onclick="return confirm('Bạn muốn đăng xuất???');"><p align="right" style="color: red">Đăng Xuất</p></a>
                 </li>
             </ul>
@@ -56,7 +56,6 @@
                 <?php } ?>
             </ul>
             <div class="title_box">Laptop bán chạy nhất</div>
-            <div style="margin-left: -3px" class="center_title_bar">Laptop bán chạy nhất</div>
             <div class="border_box">
                 <?php
                 include_once "LapTopBusiness.php";
@@ -95,7 +94,7 @@
                     <div class="prod_price"><span class="price"><?php $lT->donGia=number_format($lT->donGia, 0, ',', ', '); echo $lT->donGia."vnđ" ?></span></div>
                 </div>
                 <div class="bottom_prod_box"></div>
-                <div class="prod_details_tab" style="margin-left: 30px"> <a href="MuaHang.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" title="header=[Mua hàng] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="ChiTiet.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" class="prod_details">Chi tiết</a> </div>
+                <div class="prod_details_tab" style=""> <a href="MuaHang.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" title="header=[Mua hàng] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="ChiTiet.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" class="prod_details">Chi tiết</a> </div>
                 </div><?php }?>
         </div>
         <div class="center_content">
@@ -113,7 +112,7 @@
                     <div class="prod_price"><span class="price"><?php $lT->donGia=number_format($lT->donGia, 0, ',', ', '); echo $lT->donGia."vnđ" ?></span></div>
                 </div>
                 <div class="bottom_prod_box"></div>
-                <div class="prod_details_tab" style="margin-left: 30px"> <a href="MuaHang.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" title="header=[Mua hàng] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="ChiTiet.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" class="prod_details">Chi tiết</a> </div>
+                <div class="prod_details_tab" style=""> <a href="MuaHang.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" title="header=[Mua hàng] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="ChiTiet.php?maLT=<?php echo $lT->maLT ?>&maKH=<?php echo $_SESSION['maKH'] ?>" class="prod_details">Chi tiết</a> </div>
                 </div><?php }?>
         </div>
           <!--  <div class="prod_box">
@@ -161,7 +160,6 @@
                 <div class="cart_icon"><a href="GioHang.php?maKH=<?php echo $_SESSION['maKH'] ?>" title="header=[Giỏ hàng của tôi] body=[&nbsp;] fade=[on]"><img src="images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
             </div>
             <div class="title_box">Laptop nhiều người mua nhất</div>
-            <div style="margin-left: -28px" class="center_title_bar">Laptop nhiều người mua nhất</div>
             <div class="border_box">
                 <?php
                 include_once "LapTopBusiness.php";
